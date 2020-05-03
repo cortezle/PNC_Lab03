@@ -1,4 +1,4 @@
-package com.uca.capas.domain;
+package com.uca.capas.capas.domain;
 
 public class Student {
 	private String name;
@@ -6,6 +6,20 @@ public class Student {
 	private String fEntrada;
 	private String carrera;
 	private Boolean estado;
+	
+	
+	
+	public Student() {
+		
+	}
+	public Student(String name, String apellido, String fEntrada, String carrera, Boolean estado) {
+		super();
+		this.name = name;
+		this.apellido = apellido;
+		this.fEntrada = fEntrada;
+		this.carrera = carrera;
+		this.estado = estado;
+	}
 	public String getName() {
 		return name;
 	}
@@ -37,6 +51,8 @@ public class Student {
 		this.estado = estado;
 	}
 	
-	
+	public String delegateEstado() {
+		return estado ? "Activo":"Inactivo";
+	}
 
 }
